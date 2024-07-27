@@ -33,6 +33,17 @@ jobs:
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # ou la version de Node.js que vous utilisez
+      
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run npm build
+        run: npm run build:typescript
    
       - name: Build and push Docker image
         id: push
