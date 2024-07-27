@@ -1,0 +1,20 @@
+{
+  "name": "BTest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "tsc && sudo docker build -t btest .",
+    "build:typescript": "tsc",
+    "build:docker": "sudo docker build -t btest .",
+    "save": "sudo docker save -o build/com.bhome.btest.tar btest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.14.12",
+    "typescript": "^5.5.4"
+  }
+}
