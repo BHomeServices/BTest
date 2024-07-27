@@ -6,4 +6,8 @@ WORKDIR /usr/src/app
 
 COPY ./build/ /usr/src/app/build
 
-CMD ["node", "build/index.js"]
+COPY package*.json ./
+
+RUN npm install
+
+CMD ["npm", "start"]
