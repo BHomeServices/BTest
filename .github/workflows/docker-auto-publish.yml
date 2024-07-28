@@ -27,7 +27,7 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-     
+  
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
@@ -39,7 +39,7 @@ jobs:
         with:
           node-version: 'lts'
 
-       - name: Set up QEMU
+      - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
         with:
           platforms: all
