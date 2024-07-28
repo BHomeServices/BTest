@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:lts
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
